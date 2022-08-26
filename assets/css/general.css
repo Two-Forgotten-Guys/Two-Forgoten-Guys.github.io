@@ -43,23 +43,15 @@ html:not([data-scroll='0']) header {
  }
 
 /* HEADER */
-#header {
-	min-height: calc(65vh - 56px);
-}
-
 #header .header-intro {
-	font-size: 60px;
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none; /* Standard */
 }
 
-#header .logo-container{
-	position: absolute;
-}
-#header .logo-container .logo img{
-	height: 30%;
+#header .logo-container img{
+	width: 100%;
 }
 
 .header-cards .card {
@@ -81,6 +73,14 @@ main .bg-paralax {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+}
+
+#owr-games .card .card-text img {
+	width: 70%;
+}
+
+#owr-games .carousel .card .card-text img {
+	width: 100%;
 }
 
 /* COLORS */
@@ -112,4 +112,38 @@ footer ul {
 	color: #fff;
 	background-color: #69BE28;
 	border-color: #69BE28;
+}
+
+/* BREAKPOINTS */
+/* sm */
+
+/* md */
+@media (min-width: 768px) {
+	#header .logo-container {
+		position: absolute;
+		z-index: -1;
+	}
+
+	#header h1.header-intro {
+		font-size: 2.25rem;
+	}
+
+	#header h2.header-intro {
+		font-size: 1.95rem;
+	}
+}
+
+/* lg */
+@media (min-width: 992px) {
+	#header {
+		min-height: calc(65vh - 56px);
+	}
+	
+	#header h1.header-intro {
+		font-size: 3.5rem;
+	}
+
+	#header h2.header-intro {
+		font-size: 3rem;
+	}
 }
